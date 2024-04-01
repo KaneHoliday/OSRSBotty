@@ -12,6 +12,7 @@ namespace Corp
         Interfaces interfaces = new Interfaces();
         Peripherals peripherals = new Peripherals();
         public Mouse mouse;
+        public Mouse mouse2;
 
         public int posx;
         public int posy;
