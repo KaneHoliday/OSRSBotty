@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,12 @@ namespace Corp
 
         public float hpPercent;
         public float prayerPercent;
+		public float runPercent;
+		public float specialAttackPercent;
+		public bool running;
+		public bool poisoned;
+		public bool venomed;
+
         public int[] gameScreenCoords = new int[2];
 
 
@@ -88,5 +94,14 @@ namespace Corp
         {
             return prayerPercent;
         }
+
+		public float getRun() {
+			return runPercent;
+		}
+
+		public float getSpecialAttack() {
+			return specialAttackPercent;
+		}
+
     }
 }
