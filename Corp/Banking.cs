@@ -1,4 +1,4 @@
-﻿using Corp.Scripts;
+using Corp.Scripts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,6 @@ namespace Corp
         Interfaces interfaces = new Interfaces();
         Peripherals peripherals = new Peripherals();
         public Mouse mouse;
-        public Mouse mouse2;
 
         public int posx;
         public int posy;
