@@ -38,15 +38,7 @@ namespace Corp
         ArdyAgility ardy = new ArdyAgility();
         Hunter hunter = new Hunter();
         Addyplates smithing = new Addyplates();
-
-
-        public int corpKills = 0;
-       
-
         Gaurdians_of_the_rift gotr = new Gaurdians_of_the_rift();
-
-
-        public bool cap = true;
 
         public Form1()
         {
@@ -56,7 +48,6 @@ namespace Corp
 
         public async void findClient()
         {
-            await Task.Delay(100);
             Rectangle bounds = Screen.GetBounds(Point.Empty);
             using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
             {
@@ -83,19 +74,6 @@ namespace Corp
             }
         }
 
-        public void record()
-        {
-            hitpoints.setCoords(clientCoords[0], clientCoords[1]);
-            //inventory.setCoords(clientCoords[0], clientCoords[1]);
-
-            while (cap)
-            {
-                hitpoints.captureHp();
-                //inventory.captureInventory();
-                Thread.Sleep(1200);
-            }
-        }
-
         public async void update(string script)
         {
             if (script == "corp blocker")
@@ -113,13 +91,13 @@ namespace Corp
             }
             if(script == "Lava runes")
             {
-                label3.Text = runecrafting.xpGained.ToString();
+                label3.Text = runecrafting.xpGained.ToString(); //change to an xp drop system like rs3 runemetrics
             }
             await Task.Delay(50);
             update(script);
         }
 
-        private async void button1_Click_1(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e) //useless button
         {
             findClient();
             await Task.Delay(3000);
@@ -141,27 +119,6 @@ namespace Corp
             update("corp flincher");
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            findClient();
-        }
-
-        public void updateLabel(string x)
-        {
-            label1.Text = x;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            corp.setCoords(clientCoords[0], clientCoords[1]);
-            corp.enterDoor();
-        }
-
-        public void setKills(int x)
-        {
-
-        }
-
         private async void button4_Click_1(object sender, EventArgs e)
         {
             findClient();
@@ -181,52 +138,6 @@ namespace Corp
             {
                 corpLurer.pass3 = true;
             }
-        }
-
-        public void updateLabel(int x)
-        {
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            record();
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Todd got a bot banned from manual rock crabs");
-
-        }
-
-        private void botsBannedToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Todd got a bot banned from manual rock crabs");
-        }
-
-        private async void button3_Click_1(object sender, EventArgs e)
-        {
-            findClient();
-            Hitpoints hits2 = new Hitpoints();
-            await Task.Delay(2000);
-            hits2.setCoords(clientCoords[0], clientCoords[1]);
-
-        }
-
-        public async void go()
-        {
-            hitpoints.captureHp();
-            await Task.Delay(600);
-            go();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private async void button3_Click_2(object sender, EventArgs e)
@@ -260,27 +171,12 @@ namespace Corp
             toa.startScript();
         }
 
-        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private async void button8_Click(object sender, EventArgs e)
         {
             findClient();
             await Task.Delay(600);
             scarab.setCoords(clientCoords[0], clientCoords[1]);
             scarab.startScript();
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private async void button7_Click(object sender, EventArgs e)
@@ -311,11 +207,6 @@ namespace Corp
             update("baba");
         }
 
-        private void button16_Click(object sender, EventArgs e)
-        {
-            //proggy.loadValues();
-        }
-
         private async void button10_Click(object sender, EventArgs e)
         {
             findClient();
@@ -330,11 +221,6 @@ namespace Corp
             //update("croc");
             await Task.Delay(2000);
             fish.startScript();
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private async void button16_Click_1(object sender, EventArgs e)
