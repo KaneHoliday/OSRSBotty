@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -897,6 +898,7 @@ namespace Corp.Scripts
 
         public async void headToDoor()
         {
+            SystemSounds.Exclamation.Play();
             Cursor.Position = new Point(gameScreenCoords[0] + 264, gameScreenCoords[1] + 16);
             await Task.Delay(100);
             mouse_event(MOUSEEVENTF_LEFTDOWN, attackCoords[0], attackCoords[1], 0, 0);
