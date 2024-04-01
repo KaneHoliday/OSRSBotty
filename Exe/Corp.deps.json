@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Corp/1.0.0": {
+        "dependencies": {
+          "EasyHook": "2.7.7097"
+        },
+        "runtime": {
+          "Corp.dll": {}
+        }
+      },
+      "EasyHook/2.7.7097": {
+        "runtime": {
+          "lib/net40/EasyHook.dll": {
+            "assemblyVersion": "2.7.7097.0",
+            "fileVersion": "2.7.7097.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Corp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EasyHook/2.7.7097": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DCx3T5I1D5zo6BIjiEjE/1Wlsm0UPw9Z0DlQ9Wz12YSBohQMD4vlt03OPXfb5+MQ2WeieqVKYXvwNhnT/E+fbg==",
+      "path": "easyhook/2.7.7097",
+      "hashPath": "easyhook.2.7.7097.nupkg.sha512"
+    }
+  }
+}
